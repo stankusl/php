@@ -1,0 +1,226 @@
+  span.lines{
+    display:block !important;
+    height:8px;
+    margin-top:5px;
+  }
+  #navUl {
+    //@include transition(all, .5s, ease-in-out);
+    overflow: hidden;
+  }
+  .main-menu {
+    display: block;
+    @media(max-width: 767px) {
+      padding-top: 0;
+      display: none;
+    }
+
+    ul {
+      display: table;
+      float: right;
+      margin: 10px 0 0 0;
+      padding: 0;
+      color: #808285;
+      overflow: hidden;
+      @media(max-width: 767px) {
+        margin-top: 0;
+        display: block;
+        float: none;
+      }
+
+      li {
+        @media (max-width: $screen-sm) {
+          @include transition(margin, .5s, ease-in-out);
+          @include transition(height, .5s, ease-in-out);
+        }
+
+        list-style: none;
+        display: inline-block;
+        white-space: nowrap;
+        padding: 20px 0.6vw;
+
+        @media (min-width: $screen-sm) {
+          padding: 20px 1.1vw;
+        }
+
+        @media (min-width: 1600px) {
+          padding: 20px 15px;
+        }
+        margin: 0;
+        cursor: pointer;
+        color: #808285;
+
+        &.active {
+          span.lines {
+            display: block;
+            height: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+          }
+        }
+
+        &:hover {
+          & > span.lines {
+            display: block;
+            height: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+          }
+        }
+
+        @media(max-width: 767px) {
+          border-top: 2px solid #808285;
+          padding: 5px 0 10px 0;
+          display: block;
+          text-align: left;
+          &:hover {
+            & > span.lines {
+              display:block;
+              background:#fff !important;
+            }
+          }
+          &.active {
+            span.lines {
+              display:block;
+              background:#fff !important;
+            }
+          }
+        }
+
+        a {
+          color: #808285;
+          font-size: 17px;
+          cursor: pointer;
+          @media(max-width: 767px) {
+            font-size: 17px;
+          }
+          &:focus {
+            text-decoration: none;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+          &:active {
+            text-decoration: none;
+          }
+        }
+        ul.inner {
+          display: none;
+          padding-left: 40px;
+          li {
+            border: none;
+            padding: 5px 0 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .sub-nav {
+    display: none;
+    width: 100%;
+    min-height: 30px;
+    ul {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      li {
+        list-style: none;
+        margin: 0;
+        display: inline-block;
+        cursor: pointer;
+        &.active {
+          cursor: pointer;
+        }
+        a {
+          cursor: pointer;
+          color: #fff;
+          padding: 6px 40px;
+          font-size: 18px;
+          line-height: 33px;
+          @media(max-width: 1250px) {
+            padding: 7px 35px;
+            font-size: 17px;
+          }
+          @media(max-width: 1145px) {
+            padding: 7px 25px;
+            font-size: 16px;
+            line-height: 32px;
+          }
+          @media(max-width: 992px) {
+            padding: 7px 20px;
+          }
+          @media(max-width: 920px) {
+            padding: 7px 15px;
+          }
+          @media(max-width: 865px) {
+            padding: 7px 10px;
+            font-size: 15px;
+            line-height: 31px;
+          }
+          @media(max-width: 767px) {
+            font-size: 17px;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* Toggle Button */
+  button {
+    &.navbar-toggle {
+      width: 33px;
+      height: 30px;
+      position: relative;
+      margin-bottom: 0;
+      margin-top: 25px;
+      margin-right: 15px;
+
+      .icon-bar {
+        position: absolute;
+        top: 0;
+        @include transition(all, 0.5s ease-out);
+        background-color: #808285;
+      }
+
+      .first-bar {
+        transform: rotate(45deg);
+        margin-top: 4px;
+      }
+
+      .middle-bar {
+        opacity: 0;
+      }
+
+      .last-bar {
+        transform: rotate(-45deg);
+        margin-top: 4px;
+      }
+    }
+
+    &.collapsed {
+      .first-bar {
+        transform: rotate(0deg);
+        margin-top: 0;
+      }
+
+      .middle-bar {
+        transform: rotate(0deg);
+        opacity: 1;
+        margin-top: 9px;
+      }
+
+      .last-bar {
+        transform: rotate(0deg);
+        margin-top: 18px;
+      }
+    }
+  }
+
+.sub-navs {
+  position: relative;
+}
+

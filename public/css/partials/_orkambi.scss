@@ -1,0 +1,46 @@
+.orkambi {
+
+  .main-menu ul li:hover {
+    & > span.lines {
+      display: block;
+      height: 8px;
+      margin-top: 5px;
+      background-color: #0aa5b5;
+      border-radius: 4px;
+    }
+    & > a {
+      color: #0aa5b5;
+    }
+  }
+
+  .page-title {
+    color: #0aa5b5 !important;
+  }
+
+  .sub-nav ul li:hover {
+    & > a:hover {
+      color: #0aa5b5;
+    }
+  }
+
+  .orkambi-header{
+    background-size:cover;
+    position:relative;
+
+    .orkambi-logo{
+      display:block;
+      position:absolute;
+      bottom:20px;
+      right:20px;
+      margin:auto;
+    }
+  }
+
+  p {
+    color: #808285;
+  }
+
+  h2 {
+    color: #1ea5b4;
+  }
+}

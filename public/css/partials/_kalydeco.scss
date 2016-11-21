@@ -1,0 +1,37 @@
+.kalydeco {
+
+  .main-menu ul li:hover {
+    & > span.lines {
+      display: block;
+      height: 8px;
+      margin-top: 5px;
+      background-color: #52247f;
+      border-radius: 4px;
+    }
+    & > a {
+      color: #52247f;
+    }
+  }
+
+  .kalydeco-header{
+    background-image:url('../img/kalydeco/header-img.png') !important;
+    background-size:cover;
+    position:relative;
+    .kalydeco-logo{
+      display:block;
+      position:absolute;
+      bottom:20px;
+      right:20px;
+      margin:auto;
+    }
+  }
+
+  p {
+    color: #808285;
+  }
+
+  h2 {
+    color: #52247f;
+  }
+
+}

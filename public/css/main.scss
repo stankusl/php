@@ -1,0 +1,89 @@
+/*  CSS Resets */
+@import 'normalize.css';
+/* Components */
+@import 'partials/fonts';
+@import 'partials/variables';
+/* Libs */
+@import 'vendor/bootstrap';
+
+.container {
+  @media (min-width: 1200px) {
+    width: 1160px !important;
+    padding: 0 !important;
+  }
+
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+}
+/* Page Partials */
+@import 'partials/navbar';
+@import 'partials/languageSelector';
+@import 'partials/content';
+@import 'partials/footer';
+
+.loading-1,
+.loading-2,
+.loading-3,
+.loading-4,
+.loading-5,
+.loading-6,
+.loading-7,
+.loading-8,
+.loading-9,
+.loading-10,
+.loading-11,
+.loading-12,
+.loading-13 {
+  opacity: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+@import 'partials/footer';
+@import 'partials/text';
+@import 'partials/header';
+@import 'partials/cftr';
+@import 'partials/hcp';
+@import 'partials/kalydeco';
+@import 'partials/orkambi';
+
+.img-responsive {
+  margin-bottom: 15px;
+}
+
+#home-video {
+  height: 320px;
+  position: relative;
+  margin-top: -510px;
+
+  @media (max-width: 900px) {
+    margin-top: -470px;
+  }
+}
+
+.woman-img {
+  padding-top: 30px;
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow: scroll;
+}
+
+.modal-dialog {
+  @media (min-width: 768px) {
+    width: 600px;
+    margin: 10vh auto;
+  }
+
+  width: 90vw;
+  margin-left: 5vw;
+}
